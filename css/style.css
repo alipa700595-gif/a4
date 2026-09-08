@@ -77,31 +77,40 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(253, 245, 232, 0.95);
+  background: rgba(253, 245, 232, 0.98);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--muted-border);
-  padding: 16px 0;
+  padding: 12px 0;
+  width: 100%;
   transition: var(--transition);
+}
+
+.site-header .container {
+  max-width: 1480px;
+  width: 95%;
+  padding: 0 16px;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 16px;
+  width: 100%;
 }
 
 .brand-logo {
   font-family: var(--font-serif);
-  font-size: 1.7rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--charcoal-dark);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .brand-logo span {
@@ -111,16 +120,17 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
   white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--charcoal-dark);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   padding: 6px 0;
   position: relative;
   white-space: nowrap;
@@ -144,58 +154,17 @@ img {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 28px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 0.95rem;
+.btn-header {
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: var(--transition);
-  white-space: nowrap;
-}
-
-.btn-primary {
-  background: var(--primary-amber);
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background: var(--amber-dark);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--charcoal-dark);
-  border-color: var(--charcoal-dark);
-}
-
-.btn-secondary:hover {
-  background: var(--charcoal-dark);
-  color: #ffffff;
-}
-
-.btn-outline-amber {
-  background: transparent;
-  color: var(--primary-amber);
-  border-color: var(--primary-amber);
-}
-
-.btn-outline-amber:hover {
-  background: var(--primary-amber);
-  color: #ffffff;
+  border-radius: 4px;
 }
 
 .mobile-toggle {
@@ -206,7 +175,6 @@ img {
   cursor: pointer;
   color: var(--charcoal-dark);
 }
-
 /* Hero Section */
 .hero-section {
   padding: 80px 0 60px;
